@@ -56,7 +56,12 @@ body {
   margin: auto;
   width: 1200px;
 
-  box-shadow: 0px 0px 26px -17px black;
+  box-shadow: 
+  0px 0px 30px -17px black;
+}
+
+.header {
+  margin-bottom: 6px;
 }
 
 .header::before {
@@ -168,16 +173,16 @@ body {
   line-height: 26px;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0px;
+  letter-spacing: -0.3px;
 }
 
 .advantages-top__description {
-  margin: 0px;
+  margin: 0px;margin-left: 5px;
 
   font-size: 13px;
   line-height: 26px;
   text-transform: uppercase;
-  letter-spacing: 0px;
+  letter-spacing: -0.2px;
 }
 
 .advantages__items {
@@ -196,4 +201,9 @@ body {
 .advantages__items h3,
 .advantages__items p {
   margin: 0px;
+}
+
+.advantages-first__item,
+.advantages-third__item {
+  color: white;
 }
