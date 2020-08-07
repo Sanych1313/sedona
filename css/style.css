@@ -42,6 +42,8 @@ body {
 }
 
 .wrapper {
+  position: relative;
+
   margin: auto;
   width: 1200px;
 
@@ -127,6 +129,19 @@ body {
   font-weight: bold;
   color: black;
   text-transform: uppercase;
+}
+
+.top-menu__link[href] {
+  cursor: pointer;
+}
+
+.top-menu__link[href]:hover,
+.top-menu__link[href]:focus {
+  color: #81b3d2;
+}
+
+.top-menu__link[href]:active {
+  color: #c7c7c7;
 }
 
 .logo {
@@ -389,13 +404,118 @@ body {
   background-color: #766357;
 }
 
+.search__button span:hover,
+.search__button span:focus {
+  background-color: #604e43;
+}
+
+.search__button span:active {
+  color: #857871;
+
+  background-color: #503e33;
+}
+
 .wrapper-bottom__map {
   padding-top: 30px;
 
   background-color: white;
 }
 
-.wrapper-bottom__footer {
+.footer {
   position: absolute;
   bottom: 0px;
+
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  min-height: 120px;
+  
+  background-color: white;
+
+  opacity: 0.9;
+}
+
+.footer__hash-tag {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer__phone {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer__contacts {
+  padding-top: 36px;
+  padding-bottom: 48px;
+  padding-left: 120px;
+  width: 280px;
+}
+
+.footer__social-items {
+  display: flex;
+  flex-direction: row;
+  padding-top: 36px;
+  padding-left: 245px;
+}
+
+.footer__social-link {
+  width: 46px;
+  height: 48px;
+
+  font-size: 0px;
+
+  background-color: #81b3d2;
+}
+
+.footer__social-link:hover,
+.footer__social-link:focus {
+  background-color: #669ec0;
+}
+
+.footer__social-link:active {
+  background-color: #5496bd;
+}
+
+.footer__social-link:not(:last-child) {
+  margin-right: 6px;
+}
+
+.footer__social-link {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social-twitter {
+  background-image: url(../img/twitter.png);
+}
+
+.social-fb {
+  background-image: url(../img/facebook.png);
+}
+
+.social-youtube {
+  background-image: url(../img/youtube.png);
+}
+
+.social-twitter:active {
+  background-image: url(../img/twitter-opacity.png);
+}
+
+.social-fb:active {
+  background-image: url(../img/facebook-opacity.png);
+}
+
+.social-youtube:active {
+  background-image: url(../img/youtube-opacity.png);
+}
+
+.footer__copyrite {
+  padding: 53px 0px 49px 225px;
+}
+
+.footer__copyrite-title {
+  text-transform: uppercase;
 }
