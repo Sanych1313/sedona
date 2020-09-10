@@ -34,8 +34,9 @@ body {
   overflow: hidden;
 }
 
-.header {
+.header-index {
   position: relative;
+
   min-height: 773px;
 
   background-image: url(../img/background-photo.jpg);
@@ -50,11 +51,11 @@ body {
   box-shadow: 1px 0px 12px -5px black;
 }
 
-.header {
+.header-index {
   margin-bottom: 7px;
 }
 
-.header::before {
+.header-index::before {
   content: "";
 
   position: absolute;
@@ -66,7 +67,7 @@ body {
   background-image: url(../img/polygon.png);
 }
 
-.header::after {
+.header-index::after {
   content: "";
 
   position: absolute;
@@ -152,6 +153,258 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 2;
+}
+
+.filter {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+
+  min-height: 217px;
+
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+
+  background-image: url(../img/hotels__background.jpg);
+  background-position-y: -55px;
+}
+
+.infrastructure,
+.house {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__infrastructure,
+.filter__house {
+  padding: 28px 20px 34px 70px;
+  width: 255px;
+}
+
+.infrastructure__title,
+.house__title {
+  margin-bottom: 29px;
+
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+
+[type="checkbox"] {
+  display: none;
+}
+
+.infrastructure__label,
+.house__label {
+  position: relative;
+
+  margin: 0px 40px 30px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.infrastructure__label:last-child,
+.house__label:last-child {
+  margin-bottom: 0px;
+}
+
+.infrastructure__label::before,
+.house__label::before {
+  content: "";
+
+  position: absolute;
+  top: -4px;
+  left: -40px;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url(../img/checkbox-off.svg);
+}
+
+input:disabled + .infrastructure__label::before,
+input:disabled + .house__label::before {
+  background-image: url(../img/checkbox-off-disabled.svg);
+}
+
+input[id="swimming-pool"]:checked + label[for="swimming-pool"]::before,
+input[id="parking"]:checked + label[for="parking"]::before,
+input[id="wi-fi"]:checked + label[for="wi-fi"]::before,
+input[id="hotel"]:checked + label[for="hotel"]::before,
+input[id="motel"]:checked + label[for="motel"]::before,
+input[id="apartments"]:checked + label[for="apartments"]::before {
+  width: 27px;
+
+  background-image: url(../img/checkbox-on.svg);
+}
+
+input[id="swimming-pool"]:checked:disabled + label[for="swimming-pool"]::before,
+input[id="parking"]:checked:disabled + label[for="parking"]::before,
+input[id="wi-fi"]:checked:disabled + label[for="wi-fi"]::before,
+input[id="hotel"]:checked:disabled + label[for="hotel"]::before,
+input[id="motel"]:checked:disabled + label[for="motel"]::before,
+input[id="apartments"]:checked:disabled + label[for="apartments"]::before {
+  background-image: url(../img/checkbox-on-disabled.svg);
+}
+
+.range {
+  padding: 29px 29px 29px 300px;
+
+  width: 645px;
+}
+
+.range__title {
+  margin: 0px;
+  padding-bottom: 12px;
+
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+
+.range__description {
+  position: relative;
+
+  padding: 8px 0px;
+
+  font-size: 14px;
+
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.range__description::after {
+  content: "";
+
+  position: absolute;
+  right: 154px;
+  bottom: 5px;
+
+  width: 2px;
+  height: 22px;
+
+  background-color: white;
+}
+
+.range__price-start {
+  padding-left: 63px;
+}
+
+.range__price-end {
+  float: right;
+
+  padding-right: 47px;
+}
+
+.range__slider {
+  position: relative;
+}
+
+.range-slider__line-grey {
+  position: absolute;
+  bottom: -22px;
+
+  width: 317px;
+  height: 2px;
+
+  background-color: #7c7879;
+}
+
+.range-slider__line-white {
+  position: absolute;
+  bottom: -22px;
+
+  width: 271px;
+  height: 2px;
+
+  background-color: white;
+}
+
+.range-slider__first,
+.range-slider__second {
+  position: absolute;
+  top: 11px;
+
+  width: 20px;
+  height: 22px;
+
+  background-image: url(../img/filter-button.png)
+}
+
+.range-slider__first:hover,
+.range-slider__second:hover {
+  cursor: pointer;
+}
+
+.range-slider__second {
+  right: 45px;
+}
+
+.filter__button {
+  position: absolute;
+  right: 168px;
+  bottom: 34px;
+
+  padding: 0px;
+
+  width: 137px;
+  height: 36px;
+  
+  border: 2px solid white;
+  border-radius: 3px;
+
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.filter__button:hover,
+.filter__button:focus {
+  color: black;
+
+  background-color: white;
+
+  outline: none;
+}
+
+.sort {
+  text-transform: uppercase;
+
+  background-color: white;
+}
+
+.sort__found {
+  display: inline-block;
+
+  padding: 30px 44px 25px 70px;
+
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.sort__title,
+.sort__link {
+  font-size: 12px;
+  color: black;
+}
+
+.sort__link {
+  text-decoration: none;
+
+  opacity: 0.3;
+}
+
+.sort__icon-up,
+.sort__icon-down {
+  font-size: 0px;
 }
 
 .welcome {
@@ -450,9 +703,6 @@ body {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0px;
-
   display: flex;
   flex-direction: row;
   width: 1200px;
@@ -602,7 +852,7 @@ body {
   padding: 55px;
 
   width: 567px;
-  height: 173px;
+  min-height: 228px;
 }
 
 .search-form,
@@ -633,8 +883,8 @@ body {
 .input-label,
 .departure-label,
 .search-form span,
-.input,
-.departure {
+.search-form__input,
+.search-form__departure{
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
@@ -649,15 +899,15 @@ body {
   padding-right: 14px;
 }
 
-.input:hover,
-.input:focus,
-.departure:hover,
-.departure:focus {
+.search-form__input:hover,
+.search-form__input:focus,
+.search-form__departure:hover,
+.search-form__departure:focus {
   outline: none;
 }
 
-.input,
-.departure {
+.search-form__input,
+.search-form__departure{
   padding: 6px 180px 6px 12px;
 
   border: none;
@@ -665,13 +915,13 @@ body {
   background-color: #f2f2f2;
 }
 
-.input:hover,
-.departure:hover {
+.search-form__input:hover,
+.search-form__departure:hover {
   background-color: #ebebeb;
 }
 
-.input:focus,
-.departure:focus {
+.search-form__input:focus,
+.search-form__departurefocus {
   padding: 4px 178px 4px 10px;
 
   border: 2px solid #e5e5e5;
@@ -679,6 +929,7 @@ body {
   background-color: white;
 }
 
-.input {
+.search-form__input,
+.search-form__departure {
   margin-bottom: 30px;
 }
