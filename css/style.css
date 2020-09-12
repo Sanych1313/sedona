@@ -376,6 +376,8 @@ input[id="apartments"]:checked:disabled + label[for="apartments"]::before {
 }
 
 .sort {
+  position: relative;
+
   text-transform: uppercase;
 
   background-color: white;
@@ -384,7 +386,7 @@ input[id="apartments"]:checked:disabled + label[for="apartments"]::before {
 .sort__found {
   display: inline-block;
 
-  padding: 30px 44px 25px 70px;
+  padding: 30px 44px 33px 70px;
 
   font-size: 21px;
   font-weight: bold;
@@ -397,14 +399,97 @@ input[id="apartments"]:checked:disabled + label[for="apartments"]::before {
 }
 
 .sort__link {
-  text-decoration: none;
+  padding-right: 30px;
 
-  opacity: 0.3;
+  text-decoration: none;
+}
+
+.sort__link span {
+  border-bottom: 1px dotted #81B3D2;
+}
+
+.sort__link--active span {
+  border: none;
+
+  color: #81b3d2;
+}
+
+.sort__link span:hover,
+.sort__link span:focus {
+  color: #81b3d2;
+}
+
+.sort__link span:active {
+  border: none;
+
+  color: black;
+}
+
+.sort__link--active {
+  padding-left: 35px;
 }
 
 .sort__icon-up,
 .sort__icon-down {
   font-size: 0px;
+}
+
+.sort__icon-up {
+  padding-right: 10px;
+  padding-left: 468px;
+}
+
+.sort__icon-up::before,
+.sort__icon-down::before {
+  content: "";
+
+  display: inline-block;
+
+  border: 10px solid #CACACA;
+  border-bottom: 11px solid #cacaca;
+  border-left-width: 5px;
+  border-left-color: transparent;
+  border-right-width: 5px;
+  border-right-color: transparent;
+}
+
+.sort__icon-up::before {
+  border-top-width: 0px;
+}
+
+.sort__icon-down::before {
+   border-bottom-width: 0px;
+}
+
+.sort__icon-up:hover::before,
+.sort__icon-up:focus::before,
+.sort__icon-down:hover::before,
+.sort__icon-down:focus::before {
+  border-top-color: #000000;
+  border-bottom-color: #000000;
+}
+
+.sort__icon-up:active::before,
+.sort__icon-down:active::before {
+  border-top-color: #81B3D2;
+  border-bottom-color: #81B3D2;
+}
+
+.sort__icon--active::before {
+  border-top-color: #81B3D2;
+}
+
+.sort::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+
+  height: 1px;
+  width: 1200px;
+
+  background-color: #e5e5e5;
 }
 
 .welcome {
@@ -680,6 +765,8 @@ input[id="apartments"]:checked:disabled + label[for="apartments"]::before {
   letter-spacing: 0.6px;
 
   background-color: #766357;
+
+  cursor: pointer;
 }
 
 .search__button:hover,
@@ -702,7 +789,196 @@ input[id="apartments"]:checked:disabled + label[for="apartments"]::before {
   background-color: white;
 }
 
+.hotels {
+  background-color: #ffffff;
+}
+
+.hotel {
+  display: flex;
+  flex-direction: row;
+
+  text-transform: uppercase;
+}
+
+.hotel__foto { 
+  margin-top: 5px;
+  margin-bottom: 31px;
+  margin-left: 72px;
+}
+
+.hotel {
+  position: relative;
+
+  padding-top: 25px;
+}
+
+.hotel__title {
+  padding-left: 30px;
+
+  font-size: 20.5px;
+  font-weight: bold;
+  line-height: 26px;
+  letter-spacing: 0.4px;
+
+  cursor: pointer;
+}
+
+.hotel__title:hover,
+.hotel__title:focus {
+  color: #81B3D2;
+}
+
+.hotel__title:active {
+  color: #000000;
+
+  opacity: 0.3;
+}
+
+.hotel__container {
+  display: flex;
+
+  padding-top: 7px;
+}
+
+.hotel__class-details,
+.hotel__price-reservation {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel__class-details {
+  margin-right: 6px;
+  margin-left: 30px;
+
+  width: 111px;
+}
+
+.hotel__price-reservation {
+  width: 141px;
+}
+
+.hotel__class,
+.hotel__price,
+.hotel__details,
+.hotel__reservation,
+.rating {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.hotel__class,
+.hotel__price {
+  padding-bottom: 14px;
+}
+
+.hotel__details,
+.hotel__reservation {
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.hotel__details {
+  background-color: #81b3d2;
+}
+
+.hotel__details:hover,
+.hotel__details:focus {
+  background-color: #669ec0;
+}
+
+.hotel__details:active {
+  color: #88b6d1;
+
+  background-color: #5496bd;
+}
+
+.hotel__reservation {
+  background-color: #766357;
+}
+
+.hotel__reservation:hover,
+.hotel__reservation:focus {
+  background-color: #604e43;
+}
+
+.hotel__reservation:active {
+  color: #857871;
+
+  background-color: #503e33;
+}
+
+.hotel__details,
+.hotel__reservation {
+  border: none;
+
+  text-transform: uppercase;
+  color: white;
+}
+
+.hotel::after {
+  content: "";
+
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+
+  height: 1px;
+  width: 1200px;
+
+  background-color: #e5e5e5;
+}
+
+.hotel__rating {
+  position: relative;
+}
+
+.star1,
+.star2,
+.star3,
+.star4 {
+  position: absolute;
+
+  width: 19px;
+  height: 17px;
+}
+
+.star1 {
+  top: 4px;
+  left: 615px;
+}
+
+.star2 {
+  top: 4px;
+  left: 592px;
+}
+
+.star3 {
+  top: 4px;
+  left: 568px;
+}
+
+.star4 {
+  top: 4px;
+  left: 544px;
+}
+
+.rating {
+  margin: 0px;
+  margin: 68px 71px 31px 523px;
+  padding: 3px 13px 3px 15px;
+
+  background-color: #f2f2f2;
+}
+
 .footer {
+  position: absolute;
+  bottom: 2px;
+
   display: flex;
   flex-direction: row;
   width: 1200px;
@@ -714,11 +990,11 @@ input[id="apartments"]:checked:disabled + label[for="apartments"]::before {
 }
 
 .footer__contacts {
-  padding: 26px 10px 17px 123px;
+  padding: 27px 10px 27px 123px;
   width: 375px;
 
   font-size: 20px;
-  line-height: 33px;
+  line-height: 32px;
 }
 
 .footer__hash-tag {
@@ -850,6 +1126,7 @@ input[id="apartments"]:checked:disabled + label[for="apartments"]::before {
 
 .search-form__wrapper {
   padding: 55px;
+  padding-bottom: 77px;
 
   width: 567px;
   min-height: 228px;
@@ -882,7 +1159,6 @@ input[id="apartments"]:checked:disabled + label[for="apartments"]::before {
 
 .input-label,
 .departure-label,
-.search-form span,
 .search-form__input,
 .search-form__departure{
   font-size: 14px;
@@ -921,7 +1197,7 @@ input[id="apartments"]:checked:disabled + label[for="apartments"]::before {
 }
 
 .search-form__input:focus,
-.search-form__departurefocus {
+.search-form__departure:focus {
   padding: 4px 178px 4px 10px;
 
   border: 2px solid #e5e5e5;
@@ -929,7 +1205,149 @@ input[id="apartments"]:checked:disabled + label[for="apartments"]::before {
   background-color: white;
 }
 
-.search-form__input,
-.search-form__departure {
+.search-form__input{
   margin-bottom: 30px;
+}
+
+.search-form__departure {
+  margin-bottom: 35px;
+}
+
+.search-form__adults,
+.search-form__child,
+.adults__number,
+.child__number {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 26px;
+  letter-spacing: -0.2px;
+}
+
+.search-form__adults {
+  padding-right: 77px;
+}
+
+.adults__number,
+.child__number {
+  position: relative;
+  padding: 10px 15px;
+
+  background-color: #f2f2f2;
+}
+
+.adults__minus,
+.child__minus {
+  position: absolute;
+  top: 190px;
+
+  width: 38px;
+  height: 38px;
+
+  background-color: #f2f2f2;
+
+  cursor: pointer;
+}
+
+.adults__minus {
+  left: 167px;
+}
+
+.child__minus {
+  right: 131px;
+}
+
+.adults__minus::before,
+.child__minus::before {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 13px;
+
+  width: 11px;
+  height: 3px;
+
+  background-color: #a9a9a9;
+}
+
+.adults__plus,
+.child__plus {
+  position: absolute;
+  top: 190px;
+
+  width: 38px;
+  height: 38px;
+
+  background-color: #f2f2f2;
+
+  cursor: pointer;
+}
+
+.adults__plus {
+  left: 243px;
+}
+
+.child__plus {
+  right: 56px;
+}
+
+.adults__plus::after,
+.child__plus::after {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 13px;
+
+  width: 11px;
+  height: 3px;
+
+  background-color: #a9a9a9;
+}
+
+.adults__plus::before,
+.child__plus::before {
+  content: "";
+
+  position: absolute;
+  top: 14px;
+  left: 17px;
+
+  width: 3px;
+  height: 11px;
+
+  background-color: #a9a9a9;
+}
+
+.search-form__child {
+  padding-right: 62px;
+  padding-left: 86px;
+}
+
+.adults__minus:hover .adults__minus::before,
+.adults__minus:focus .adults__minus::before {
+  background-color: #000000;
+}
+
+.search-form__button {
+  margin-left: 55px;
+  padding: 16px 197px;
+
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+.search-form__button:hover,
+.search-form__button:focus {
+  background-color: #669ec0;
+}
+
+.search-form__button:active {
+  color: #88b6d1;
+
+  background-color: #5496bd;
 }

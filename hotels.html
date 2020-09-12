@@ -69,7 +69,7 @@
           </div>
         </div>
 
-        <button class="filter__button">
+        <button type="button" class="filter__button">
           <span>Показать</span>
         </button>
       </form>
@@ -82,6 +82,117 @@
         <a href="#" class="sort__link"><span>По рейтингу</span></a>
         <a href="#" class="sort__icon sort__icon-up">Вверх</a>
         <a href="#" class="sort__icon sort__icon-down sort__icon--active">Вниз</a>
+      </div>
+
+      <div class="hotels">
+        <div class="hotels__amara-resort hotel">
+          <img src="img/hotel-1.jpg" alt="Гостиница Amara Resort & Spa" class="hotel__foto" width="135px" height="90px">
+
+          <div class="hotel__description">
+            <a src="#" class="hotel__title">Amara Resort & Spa</a>
+
+            <div class="hotel__container">
+              <div class="hotel__class-details">
+                <span class="hotel__class">Гостиница</span>
+                <button type="button" class="hotel__details">Подробнее</button>
+              </div>
+
+              <div class="hotel__price-reservation">
+                <span class="hotel__price">От 4000 р.</span>
+                <button type="button" class="hotel__reservation">Забронировать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="hotel__rating">
+            <div class="hotel__star">
+              <svg class="star4">
+                <use xlink:href="#star"></use>
+              </svg>
+
+              <svg class="star3">
+                <use xlink:href="#star"></use>
+              </svg>
+  
+              <svg class="star2">
+                <use xlink:href="#star"></use>
+              </svg>
+  
+              <svg class="star1">
+                <use xlink:href="#star"></use>
+              </svg>
+            </div>
+
+            <p class="rating">Рейтинг: 8,5</p>
+          </div>
+        </div>
+
+        <div class="hotels__desert-quail hotel">
+          <img src="img/hotel-2.jpg" alt="Мотель Desert Quail Inn" class="hotel__foto" width="135px" height="90px">
+
+          <div class="hotel__description">
+            <a src="#" class="hotel__title">Desert Quail Inn</a>
+
+            <div class="hotel__container">
+              <div class="hotel__class-details">
+                <span class="hotel__class">Мотель</span>
+                <button type="button" class="hotel__details">Подробнее</button>
+              </div>
+
+              <div class="hotel__price-reservation">
+                <span class="hotel__price">От 3000 р.</span>
+                <button type="button" class="hotel__reservation">Забронировать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="hotel__rating">
+            <svg class="star3">
+              <use xlink:href="#star"></use>
+            </svg>
+
+            <svg class="star2">
+              <use xlink:href="#star"></use>
+            </svg>
+
+            <svg class="star1">
+              <use xlink:href="#star"></use>
+            </svg>
+          </div>          
+          
+          <p class="rating">Рейтинг: 8,9</p>
+        </div>
+
+        <div class="hotels__villas-at-poco-diablo hotel">
+          <img src="img/hotel-3.jpg" alt="Апартаменты Villas At Poco Diablo" class="hotel__foto" width="135px" height="90px">
+
+          <div class="hotel__description">
+            <a src="#" class="hotel__title">Villas At Poco Diablo</a>
+
+            <div class="hotel__container">
+              <div class="hotel__class-details">
+                <span class="hotel__class">Апартаменты</span>
+                <button type="button" class="hotel__details">Подробнее</button>
+              </div>
+
+              <div class="hotel__price-reservation">
+                <span class="hotel__price">От 2000 р.</span>
+                <button type="button" class="hotel__reservation">Забронировать</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="hotel__rating">
+            <svg class="star2">
+              <use xlink:href="#star"></use>
+            </svg>
+
+            <svg class="star1">
+              <use xlink:href="#star"></use>
+            </svg>
+          </div>
+
+          <p class="rating">Рейтинг: 9,2</p>
       </div>
 
       <footer class="footer">
@@ -122,6 +233,12 @@
     </div>
 
     <svg display="none">
+      <symbol id="star" viewBox="0 0 19 17">
+        <g>
+          <path d="M9.002 0L11.128 6.494H18.005L12.441 10.506L14.566 17L9.002 12.987L3.438 17L5.564 10.506L0 6.494H6.878L9.002 0Z" fill="#81B3D2"/>
+        </g>
+      </symbol>
+
       <symbol id="twitter" viewBox="0 0 17 17">
         <g>
           <path d="M10.95 1.144C12.635 0.648 13.934 1.414 14.527 2.323C15.2 2.092 15.858 1.842 16.538 1.615C16.5249 2.30137 16.2117 2.94752 15.681 3.383C16.366 3.553 16.985 2.892 16.985 2.892C16.816 3.892 15.979 4.68 15.422 4.916C15.191 11.666 12.247 16.133 5.34498 15.998H4.89898C4.48898 15.998 0.734977 15.538 0.000976562 14.111C2.27198 14.307 3.89398 13.689 4.69398 12.934C3.73398 12.634 2.01498 12.457 1.71498 9.984C2.06398 10.09 2.27898 10.212 2.90498 10.103C1.70498 9.247 0.373977 8.53 0.447977 6.33C0.732977 6.658 1.51498 6.866 1.78798 6.802C1.08498 6.561 -0.182023 3.442 0.893977 1.85C2.71198 3.704 4.62898 5.456 8.04598 5.623C8.25398 3.33 9.18298 1.793 10.95 1.144Z" fill="white"/>
