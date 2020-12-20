@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper">
-      <header class="header-hotels">
-        <div class="logo">
-          <a href="#" class="header-logo">
-            <img src="img/logo.png" width="140px" height="71px" alt="Логотип Седона">
+      <header class="header">
+        <div class="header-logo">
+          <a class="logo" href="index.html">
+            <img src="img/logo.png" width="140" height="71" alt="Логотип Седона">
           </a>
         </div>
 
-        <ul class="top-menu top-menu__left">
-          <li class="top-menu__item top-menu__left-item">
+        <ul class="header__top-menu top-menu top-menu__left">
+          <li class="top-menu__item">
             <a href="index.html" class="top-menu__link">Информация</a>
           </li>
           <li class="top-menu__item">
@@ -24,54 +24,56 @@
           </li>
         </ul>
 
-        <ul class="top-menu top-menu__right">
-          <li class="top-menu__item top-menu__right-item">
+        <ul class="header__top-menu top-menu top-menu__right">
+          <li class="top-menu__item">
             <a href="#" class="top-menu__link">Карта штата</a>
           </li>
           <li class="top-menu__item">
-            <a class="top-menu__link">Гостиницы</a>
+            <a class="top-menu__link top-menu__link--current">Гостиницы</a>
           </li>
         </ul>
       </header>
 
-      <form class="filter">
-        <div class="filter__infrastructure infrastructure">
-          <span class="infrastructure__title">Инфраструктура:</span>
-          <input id="swimming-pool" type="checkbox" name="swimming-pool" checked>
-          <label class="infrastructure__label" for="swimming-pool">Бассейн</label>
-          <input id="parking" type="checkbox" name="parking">
-          <label class="infrastructure__label" for="parking">Парковка</label>
-          <input id="wi-fi" type="checkbox" name="wi-fi">
-          <label class="infrastructure__label" for="wi-fi">wi-fi</label>
-        </div>
-
-        <div class="filter__house house">
-          <span class="house__title">Тип жилья:</span>
-          <input id="hotel" type="checkbox" name="hotel" checked>
-          <label class="house__label" for="hotel">Гостиница</label>
-          <input id="motel" type="checkbox" name="motel" checked>
-          <label class="house__label" for="motel">Мотель</label>
-          <input id="apartments" type="checkbox" name="apartments" checked>
-          <label class="house__label" for="apartments">Апартаменты</label>
-        </div>
-
-        <div class="filter__range range">
-          <p class="range__title">Стоимость в сутки (р):</p>
-          <div class="range__description">
-            <span class="range__price-start">От 0</span>
-            <span class="range__price-end">До 3000</span>
+      <form class="filter" action="https://echo.htmlacademy.ru" method="post">
+        <div class="filter__first">
+          <div class="filter__infrastructure infrastructure">
+            <p class="infrastructure__title">Инфраструктура:</p>
+            <input id="swimming-pool" type="checkbox" name="swimming-pool" checked>
+            <label class="infrastructure__label" for="swimming-pool">Бассейн</label>
+            <input id="parking" type="checkbox" name="parking">
+            <label class="infrastructure__label" for="parking">Парковка</label>
+            <input id="wi-fi" type="checkbox" name="wi-fi">
+            <label class="infrastructure__label" for="wi-fi">wi-fi</label>
           </div>
-          <div class="range__slider range-slider">
-            <span class="range-slider__line-grey"></span>
-            <span class="range-slider__line-white"></span>
-            <span class="range-slider__first"></span>
-            <span class="range-slider__second"></span>
-          </div>
-        </div>
 
-        <button type="button" class="filter__button">
-          <span>Показать</span>
-        </button>
+          <div class="filter__house house">
+            <p class="house__title">Тип жилья:</p>
+            <input id="hotel" type="checkbox" name="hotel" checked>
+            <label class="house__label" for="hotel">Гостиница</label>
+            <input id="motel" type="checkbox" name="motel" checked>
+            <label class="house__label" for="motel">Мотель</label>
+            <input id="apartments" type="checkbox" name="apartments" checked>
+            <label class="house__label" for="apartments">Апартаменты</label>
+          </div>
+        </div><!--/filter__first-->
+
+        <div class="filter__second">
+          <div class="filter__range range">
+            <p class="range__title">Стоимость в сутки (р):</p>
+            <div class="range__description">
+              <span class="range__price-start">От 0</span>
+              <span class="range__price-end">До 3000</span>
+            </div>
+            <div class="range__slider range-slider">
+              <span class="range-slider__line-grey"></span>
+              <span class="range-slider__line-white"></span>
+              <span class="range-slider__first"></span>
+              <span class="range-slider__second"></span>
+            </div>
+          </div>
+
+          <button type="submit" class="filter__button button">Показать</button>
+        </div><!--/filter__second-->
       </form>
 
       <div class="sort">
@@ -82,155 +84,169 @@
         <a href="#" class="sort__link"><span>По рейтингу</span></a>
         <a href="#" class="sort__icon sort__icon-up">Вверх</a>
         <a href="#" class="sort__icon sort__icon-down sort__icon--active">Вниз</a>
-      </div>
+      </div><!--/sort-->
 
       <div class="hotels">
-        <div class="hotels__amara-resort hotel">
-          <img src="img/hotel-1.jpg" alt="Гостиница Amara Resort & Spa" class="hotel__foto" width="135px" height="90px">
+        <div class="hotels__item hotel">
+          <img src="img/hotel-1.jpg" alt="Гостиница Amara Resort & Spa" class="hotel__foto" width="135" height="90">
 
           <div class="hotel__description">
-            <a src="#" class="hotel__title">Amara Resort & Spa</a>
+            <h3 class="hotel__title"><a src="#">Amara Resort & Spa</a></h3>
 
             <div class="hotel__container">
               <div class="hotel__class-details">
                 <span class="hotel__class">Гостиница</span>
-                <button type="button" class="hotel__details">Подробнее</button>
+                <button type="button" class="button hotel__button button__blue">Подробнее</button>
               </div>
 
               <div class="hotel__price-reservation">
                 <span class="hotel__price">От 4000 р.</span>
-                <button type="button" class="hotel__reservation">Забронировать</button>
+                <button type="button" class="button hotel__button button__brown">Забронировать</button>
               </div>
             </div>
           </div>
 
           <div class="hotel__rating">
             <div class="hotel__star">
-              <svg class="star4">
+              <svg class="star">
                 <use xlink:href="#star"></use>
               </svg>
 
-              <svg class="star3">
+              <svg class="star">
                 <use xlink:href="#star"></use>
               </svg>
   
-              <svg class="star2">
+              <svg class="star">
                 <use xlink:href="#star"></use>
               </svg>
   
-              <svg class="star1">
+              <svg class="star">
                 <use xlink:href="#star"></use>
               </svg>
             </div>
 
             <p class="rating">Рейтинг: 8,5</p>
           </div>
-        </div>
+        </div><!--/hotels__item-->
 
-        <div class="hotels__desert-quail hotel">
-          <img src="img/hotel-2.jpg" alt="Мотель Desert Quail Inn" class="hotel__foto" width="135px" height="90px">
+        <div class="hotels__item hotel">
+          <img src="img/hotel-2.jpg" alt="Мотель Desert Quail Inn" class="hotel__foto" width="135" height="90">
 
           <div class="hotel__description">
-            <a src="#" class="hotel__title">Desert Quail Inn</a>
+            <h3 class="hotel__title"><a src="#">Desert Quail Inn</a></h3>
 
             <div class="hotel__container">
               <div class="hotel__class-details">
                 <span class="hotel__class">Мотель</span>
-                <button type="button" class="hotel__details">Подробнее</button>
+                <button type="button" class="button hotel__button button__blue">Подробнее</button>
               </div>
 
               <div class="hotel__price-reservation">
                 <span class="hotel__price">От 3000 р.</span>
-                <button type="button" class="hotel__reservation">Забронировать</button>
+                <button type="button" class="button hotel__button button__brown">Забронировать</button>
               </div>
             </div>
           </div>
 
           <div class="hotel__rating">
-            <svg class="star3">
-              <use xlink:href="#star"></use>
-            </svg>
+            <div class="hotel__star">
+              <svg class="star">
+                <use xlink:href="#star"></use>
+              </svg>
 
-            <svg class="star2">
-              <use xlink:href="#star"></use>
-            </svg>
+              <svg class="star">
+                <use xlink:href="#star"></use>
+              </svg>
 
-            <svg class="star1">
-              <use xlink:href="#star"></use>
-            </svg>
-          </div>          
-          
-          <p class="rating">Рейтинг: 8,9</p>
-        </div>
+              <svg class="star">
+                <use xlink:href="#star"></use>
+              </svg>
+            </div>
 
-        <div class="hotels__villas-at-poco-diablo hotel">
-          <img src="img/hotel-3.jpg" alt="Апартаменты Villas At Poco Diablo" class="hotel__foto" width="135px" height="90px">
+            <p class="rating">Рейтинг: 8,9</p>
+          </div>   
+        </div><!--/hotels__item-->
+
+        <div class="hotels__item hotel">
+          <img src="img/hotel-3.jpg" alt="Апартаменты Villas At Poco Diablo" class="hotel__foto" width="135" height="90">
 
           <div class="hotel__description">
-            <a src="#" class="hotel__title">Villas At Poco Diablo</a>
+            <h3 class="hotel__title"><a src="#">Villas At Poco Diablo</a></h3>
 
             <div class="hotel__container">
               <div class="hotel__class-details">
                 <span class="hotel__class">Апартаменты</span>
-                <button type="button" class="hotel__details">Подробнее</button>
+                <button type="button" class="button hotel__button button__blue">Подробнее</button>
               </div>
 
               <div class="hotel__price-reservation">
                 <span class="hotel__price">От 2000 р.</span>
-                <button type="button" class="hotel__reservation">Забронировать</button>
+                <button type="button" class="button hotel__button button__brown">Забронировать</button>
               </div>
             </div>
           </div>
 
           <div class="hotel__rating">
-            <svg class="star2">
-              <use xlink:href="#star"></use>
-            </svg>
+            <div class="hotel__star">
+              <svg class="star">
+                <use xlink:href="#star"></use>
+              </svg>
 
-            <svg class="star1">
-              <use xlink:href="#star"></use>
-            </svg>
+              <svg class="star">
+                <use xlink:href="#star"></use>
+              </svg>
+            </div>
+
+            <p class="rating">Рейтинг: 9,2</p>
           </div>
-
-          <p class="rating">Рейтинг: 9,2</p>
-      </div>
+        </div><!--/hotels__item-->
+      </div><!--hotels-->
 
       <footer class="footer">
         <div class="footer__contacts">
-          <a class="footer__hash-tag">#visitsedona</a><br>
-          <tel class="footer__phone"><span>Тел: </span>+7(495)666-02-66</tel>
-        </div>
+          <a class="footer__hash-tag" href="#">#visitsedona</a><br>
+          <span class="footer__phone">Тел: <a class="footer__phone-link" href="tel:74956660266">+7(495)666-02-66</a></span>
+        </div><!--/footer__contacts-->
 
-        <div class="footer__social-items">
-          <a href="#" class="footer__social-link social-twitter">Твитер
+        <div class="footer__social">
+          <a class="footer__social-link" href="#">
             <svg class="icon-twitter">
               <use xlink:href="#twitter"></use>
             </svg>
+
+            Твитер
           </a>
 
-          <a href="#" class="footer__social-link social-fb">Фейсбук
+          <a class="footer__social-link" href="#">
             <svg class="icon-facebook">
               <use xlink:href="#facebook"></use>
             </svg>
+
+            Фейсбук
           </a>
 
-          <a href="#" class="footer__social-link social-youtube">Ю-туб
+          <a class="footer__social-link" href="#">
             <svg class="icon-youtube">
               <use xlink:href="#youtube"></use>
             </svg>
+
+            Ю-туб
           </a>
-        </div>
+        </div><!--/footer__social-->
 
         <div class="footer__copyrite">
-          <span class="footer__copyrite-title">Website by</span>
-          <a href="https://up.htmlacademy.ru/htmlcss/27" class="footer__copyrite-academy">Сайт Академии
+          <span class="footer__copyrite-description">Website by</span>
+          <a class="footer__copyrite-link" href="https://up.htmlacademy.ru/htmlcss/27">
             <svg class="icon-logo">
               <use xlink:href="#logo-htmlacademy"></use>
             </svg>
+
+            Сайт Академии
           </a>
-        </div>
+        </div><!--/footer__copyrite-->
       </footer>
-    </div>
+      
+    </div><!--/wrapper-->
 
     <svg display="none">
       <symbol id="star" viewBox="0 0 19 17">
@@ -263,5 +279,7 @@
         </g>
       </symbol>
     </svg>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
